@@ -33,6 +33,7 @@ button{
 .calc-text {
   border: 1px solid red;
   text-align: end;
+  font: bold 1.25em auto;
   padding: 0.5em;
   border-radius: 5px;
   margin: 0.25em auto;
