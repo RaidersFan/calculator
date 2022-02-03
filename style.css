@@ -2,15 +2,16 @@
   --operator-color: rgba(1, 96, 173, 0.712);
   --container-color: rgba(182, 200, 219, 0.363);
   --button-color: rgb(206,206,206);
-  --text-box-color:rgba(129, 144, 160, 0.363) ;
-  --text-color: ;
+  --text-box-color:rgba(146, 162, 180, 0.363) ;
+  --text-color: rgb(231, 231, 185);
+  --font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .calculator-container{
   width: fit-content;
-  border: 1px solid black;
   border-radius: 5px;
-  padding: 0.25em;
+  padding: 0.5em;
   background-color: var(--container-color);
 }
 
@@ -23,7 +24,8 @@ button{
 }
 
 .input-text{
-  border: 1px solid blue;
+  border-style: hidden;
+  /* border: 1px solid blue; */
   border-radius: 5px;
   padding: 0.5em;
   background-color: var(--text-box-color);
@@ -31,9 +33,10 @@ button{
 }
 
 .calc-text {
-  border: 1px solid red;
+  border-style: hidden;
+  /* border: 1px solid red; */
   text-align: end;
-  font: bold 1.25em auto;
+  font: bold 1.25em var(--font-family);
   padding: 0.5em;
   border-radius: 5px;
   margin: 0.25em auto;
@@ -57,11 +60,18 @@ body{
 
 .operator {
   background-color: var(--operator-color);
+  color: var(--text-color)
 }
 
 .equals {
   grid-column: 4 / span 2;
   font-size: 1.5em;
   height: 3rem;
-  background-color: rgba(196, 0, 0, 0.842)
+  background-color: rgba(196, 0, 0, 0.842);
+}
+
+.dot{
+  font-size: 1.5em;
+  height: 3rem;
+  align-content: center;
 }
