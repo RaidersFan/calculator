@@ -3,29 +3,53 @@
   --container-color: rgba(182, 200, 219, 0.363);
   --button-color: rgb(206,206,206);
   --text-box-color:rgba(146, 162, 180, 0.363) ;
-  --text-color: rgb(231, 231, 185);
+  --text-color: rgb(228, 228, 213);
   --font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: var(--font-family);
 }
 
 .calculator-container{
-  width: fit-content;
   border-radius: 5px;
   padding: 0.5em;
   background-color: var(--container-color);
 }
 
 button{
-  font-size: 1em;
+  font-size: 1.25em;
   height: 3em;
   border-radius: 5px;
   border-style: hidden;
   background-color: var(--button-color);
+  box-shadow: 0 3px #999;
+}
+
+button:hover{
+  transform: scale(1.1);
+}
+
+button:active,
+.button-active{
+  box-shadow: 0 1.5px #999;
+  transform: translateY(1px);
+}
+
+.number.button-active,
+button:active.number{
+  background-color: orange;
+}
+
+.operator.button-active,
+button:active.operator{
+  background-color: rgb(130, 203, 228);
+}
+
+#Enter.button-active{
+  background-color: lightcoral;
 }
 
 .input-text{
   border-style: hidden;
-  /* border: 1px solid blue; */
+  height: 1rem;
   border-radius: 5px;
   padding: 0.5em;
   background-color: var(--text-box-color);
@@ -34,7 +58,6 @@ button{
 
 .calc-text {
   border-style: hidden;
-  /* border: 1px solid red; */
   text-align: end;
   font: bold 1.25em var(--font-family);
   padding: 0.5em;
@@ -63,15 +86,15 @@ body{
   color: var(--text-color)
 }
 
-.equals {
+#Enter {
   grid-column: 4 / span 2;
-  font-size: 1.5em;
-  height: 3rem;
+  font-size: 1.875em;
+  height: 3.75rem;
   background-color: rgba(196, 0, 0, 0.842);
+  font-weight: bold;
 }
 
 .dot{
-  font-size: 1.5em;
-  height: 3rem;
-  align-content: center;
+  font-size: 1.875em;
+  height: 3.75rem;
 }
