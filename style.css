@@ -1,9 +1,9 @@
 :root {
   --operator-color: rgba(1, 96, 173, 0.712);
-  --container-color: rgba(182, 200, 219, 0.363);
+  --container-color: rgba(182, 200, 219, 0.918);
   --button-color: rgb(206,206,206);
-  --text-box-color:rgba(146, 162, 180, 0.363) ;
-  --text-color: rgb(228, 228, 213);
+  --text-box-color:rgba(111, 124, 138, 0.363) ;
+  --operator-text-color: rgb(228, 228, 213);
   --font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-family: var(--font-family);
 }
@@ -43,7 +43,8 @@ button:active.operator{
   background-color: rgb(130, 203, 228);
 }
 
-#Enter.button-active{
+#Enter.button-active,
+button:active#Enter{
   background-color: lightcoral;
 }
 
@@ -64,6 +65,7 @@ button:active.operator{
   border-radius: 5px;
   margin: 0.25em auto;
   background-color: var(--text-box-color);
+  height: 1rem;
 }
 
 .entry-buttons {
@@ -79,11 +81,16 @@ body{
   display: grid;
   justify-content: center;
   align-items: center;
+  background-image: url('background.jpeg');
+  background-size: cover;
 }
 
-.operator {
+.operator,
+.plus-minus,
+.dot,
+#Enter {
   background-color: var(--operator-color);
-  color: var(--text-color)
+  color: var(--operator-text-color)
 }
 
 #Enter {
