@@ -81,7 +81,7 @@ body{
   display: grid;
   justify-content: center;
   align-items: center;
-  background-image: url('background.jpeg');
+  background-image: url('images/background.jpeg');
   background-size: cover;
 }
 
