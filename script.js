@@ -30,7 +30,7 @@ let pushButton = e => {
   switch (true) {
     case btn.id == 'Enter':
       clearNext = true
-      inputText.innerText += '='
+      if (inputText.innerText[inputText.innerText.length - 1] != '=') inputText.innerText += '='
       return equate();
     case btn.id == 'Backspace':
       return backspace(1);
